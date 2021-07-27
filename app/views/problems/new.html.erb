@@ -1,0 +1,71 @@
+
+<div class="new-problem">
+  <div class="new-problem-header">
+    <%= link_to image_tag('IMG_3923.jpg'), root_path%>
+    <h2>新規課題投稿</h2>
+  </div>
+  <%= form_with model: @problem, URL: problems_path, local: true do |f|%>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="new-problem-main">
+    <%# 課題画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        課題画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# 課題画像 %>
+
+    <%# 課題の情報%>
+    <div class="new-problem-detail">
+      <div class="weight-bold-text">
+        セッターの名前
+      </div>
+      <%= f.text_area :setter, class:"setter-name", id:"setter-name" %>
+
+
+      <div class="weight-bold-text">
+          グレード
+      </div>
+      <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+
+      <div class="weight-bold-text">
+        メモ
+      </div>
+      <%= f.text_area :memo, class:"problem-memo", id:"problem-info", placeholder:"課題の説明（課題のポイント、核心など）を書いてください。(例)３手目取りが核心です。ヒールフックを使いましょう。" ,rows:"7" ,maxlength:"1000" %>
+    
+      <div class="weight-bold-text">
+        壁の形状・場所
+      </div>
+      <%= f.text_area :area, class:"items-area", id:"item-area", placeholder:"壁の形状・場所を書いてください(例)スラブ、垂壁、セッションエリア、ビギナーエリアなど", maxlength:"40" %>
+
+      <div class="weight-bold-text">
+        ユーザー名
+      </div>
+      <%# <%= problem.user %> 
+   
+      <div class="weight-bold-text">
+        完登・未完登
+      </div>
+      <%= f.collection_select(:climb_done_id, ClimbDone.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+
+    </div>
+
+    <div class="problem-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+<% end %>
