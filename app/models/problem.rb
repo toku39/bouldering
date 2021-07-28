@@ -1,14 +1,15 @@
 class Problem < ApplicationRecord
-  belongs_to :user
-  has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :grade
   belongs_to :climb_done
+  belongs_to :user
+  has_one_attached :image
 
   with_options presence: true do
     validates :setter
     validates :area
     validates :memo
+    validates :image
   end
     
 

@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%# <%= render "shared/header" %> 
 
 
 <!DOCTYPE html>
@@ -9,21 +9,59 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
+  <header>
+    <div class="top-header">
+      <h1>Bouldering Record</h1> 
+      <%= link_to image_tag('IMG_3923.jpg'), root_path%>
+    </div>
+    <div class="nav">
+      <ul class="sign-up">
+        <li><%= link_to current_user, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      </ul>
+    </div>
+  </header>
+
   <body>
-    <header>
-      <div class="top-header">
-        <h1>Bouldering Record</h1> 
-        <img src="img/IMG_3917.png">
-      </div>
-      <div class="nav">
-        <ul class="sign-up">
-          <li>ユーザー名</li>
-          <li>ログアウト</li>
-          <li>ログイン</li>
-          <li>新規登録</li>
-        </ul>
-      </div>
+      <h2>Bouldering Record(ボルレコ)とは？</h2>
       
-    </header>
+
+      <div class="problem-contents">
+        <% @problem.each do |problem| %>
+        <li class="list">
+          <%= link_to problems_path(problem.id) do %>
+          <div class="problem-img-content">
+              <%= image_tag problem.image, size: '200x200', class: "problem-img" %>
+              <% end %>
+
+          </div>
+         
+        
+        <div class="problem-info">
+          <div class="problem-name">
+            <%= problem.setter %>
+          </div>
+          <div class="problem-grade">
+            <%= problem.grade.name %>
+          </div>
+          <div class="problem-user">
+            <%= problem.user.name%>
+          </div>
+        </div>
+      
+      
+      
+       <% end %>
+      
+      </div>
+
+      <%= link_to(new_problem_path, class: 'problem-btn') do %>
+        <span class='problem-btn-text'>投稿する</span>
+        <%= image_tag 'IMG_3923.jpg' , size: '185x50' ,class: "problem-btn-icon" %>
+      <% end %>
+
+      
   </body>
 </html>
