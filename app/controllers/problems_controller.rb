@@ -1,5 +1,6 @@
 class ProblemsController < ApplicationController
-  
+  before_action :find_problem, only: [:show, :edit, :update, :destroy] 
+
   def index
     @problem = Problem.order('created_at DESC')
   end
@@ -18,15 +19,12 @@ class ProblemsController < ApplicationController
   end
 
   def show
-    @problem = Problem.find(params[:id])
   end
 
   def edit
-    @problem = Problem.find(params[:id])
   end
 
   def update
-    @problem = Problem.find(params[:id])
     if @problem.update(problem_params)
       redirect_to root_path
     else
@@ -34,10 +32,23 @@ class ProblemsController < ApplicationController
     end
   end
 
+  def destroy
+    if @problem.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
+
 
   private
 
   def problem_params
     params.require(:problem).permit(:setter, :grade_id, :area, :memo, :user, :climb_done_id, :image).merge(user_id: current_user.id)
+  end
+
+  def find_problem
+    @problem = Problem.find(params[:id])
   end
 end
