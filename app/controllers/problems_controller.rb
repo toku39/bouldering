@@ -1,5 +1,7 @@
 class ProblemsController < ApplicationController
+  
   def index
+    @problem = Problem.order('created_at DESC')
   end
 
   def new
@@ -19,6 +21,6 @@ class ProblemsController < ApplicationController
   private
 
   def problem_params
-    params.require(:problem).permit(:setter, :grade_id, :area, :memo, :user, :climb_done_id).merge(user_id: current_user.id)
+    params.require(:problem).permit(:setter, :grade_id, :area, :memo, :user, :climb_done_id, :image).merge(user_id: current_user.id)
   end
 end
