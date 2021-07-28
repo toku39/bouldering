@@ -31,7 +31,7 @@
       <div class="problem-contents">
         <% @problem.each do |problem| %>
         <li class="list">
-          <%= link_to problems_path(problem.id) do %>
+          <%= link_to problem_path(problem.id) do %>
           <div class="problem-img-content">
               <%= image_tag problem.image, size: '200x200', class: "problem-img" %>
               <% end %>

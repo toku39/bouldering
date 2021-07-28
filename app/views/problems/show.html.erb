@@ -1,0 +1,20 @@
+<div class="problem-show">
+  <div class="problem-box">
+    <div class="item-img-content">
+      <%= image_tag @problem.image,size: '200x200', class:"item-box-img" %>
+    </div>
+
+    <div class="name">
+      <%= @problem.setter %>
+    </div>
+    <div class="item-price-box">
+      <span class="item-postage">
+        <%= @problem.grade.name %>
+      </span>
+
+      <%= @problem.area %>
+      <%= @problem.memo %>
+      <%= @problem.user.name %>
+      <%= @problem.climb_done.name %>
+
+    </div>
