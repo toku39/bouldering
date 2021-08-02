@@ -1,70 +1,77 @@
-<%# <%= render "shared/header" %> 
-
 
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bouldering</title>
-    <link rel="stylesheet" href="css/styles.css">
+    
+    
   </head>
 
-  <header>
-    <div class="top-header">
-      <h1>Bouldering Record</h1> 
-      <%= link_to image_tag('IMG_3923.jpg'), root_path%>
-    </div>
-    <div class="nav">
-      <ul class="sign-up">
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.name, class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-      </ul>
-    </div>
-  </header>
+  
 
   <body>
+    <header class="top-header">
+      <div class="top-header-logo">
+        <%= link_to image_tag('IMG_3923.jpg'), root_path%>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-bar-left">
+          <% if user_signed_in? %>
+            <p class="nav-bar-left">ようこそ <%= link_to current_user.name%>さん</p>
+          <% end %>
+        </div>
+        <ul class="nav-bar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "sign-button" %></li>
+            <li><%= link_to '新規投稿', new_problem_path, class: "sign-button"%></li>
+          <% else %>
+        </ul>
+        <ul class="nav-bar-right">
+            <li><%= link_to 'ログイン', new_user_session_path, class: "sign-button" %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-button" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
+
+    <div class="app-detail">
       <h2>Bouldering Record(ボルレコ)とは？</h2>
-      
+      <p>ボルダリングの課題を記録・管理・共有できるアプリです。</p>
+      <p>良い課題が作成されても一定期間経つと更新され、この世から消えてしまうのはもったいない。良い課題こそネット上に記録し残していこうという想いからボルレコが作られました。</p>
+    </div>
 
       <div class="problem-contents">
-        <% @problem.each do |problem| %>
-        <li class="list">
-          <%= link_to problem_path(problem.id) do %>
-          <div class="problem-img-content">
-              <%= image_tag problem.image, size: '200x200', class: "problem-img" %>
-              <% end %>
-
-          </div>
-         
-        
-        <div class="problem-info">
-          <div class="problem-name">
-            <%= problem.setter %>
-          </div>
-          <div class="problem-grade">
-            <%= problem.grade.name %>
-          </div>
-          <div class="problem-user">
-            <%= problem.user.name%>
-          </div>
-        </div>
-      
-      
-      
-       <% end %>
-      
+        <h2 class="problem-title">投稿一覧</h2>
+        <ul class="problem-lists">
+          <% @problem.each do |problem| %>
+            <li class="list">
+              <%= link_to problem_path(problem.id) do %>
+              <div class="problem-img-content">
+                <%= image_tag problem.image, size: '200x200', class: "problem-img" %>
+                <% end %>
+              </div>
+          
+              <div class="problem-info">
+                <div class="problem-name">
+                  <%= "セッター #{problem.setter}" %>
+                </div>
+                <div class="problem-grade">
+                  <%= "グレード #{problem.grade.name}" %>
+                </div>
+                <div class="problem-user">
+                  <%= problem.user.name%>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
       </div>
-
-      <%= link_to(new_problem_path, class: 'problem-btn') do %>
-        <span class='problem-btn-text'>投稿する</span>
-        <%= image_tag 'IMG_3923.jpg' , size: '185x50' ,class: "problem-btn-icon" %>
-      <% end %>
-
+    <footer>
+      &copy; Bouldering Record
+    </footer>
       
   </body>
 </html>

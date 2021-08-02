@@ -1,0 +1,116 @@
+@import url(sanitize.css);
+
+/* ヘッダー start */
+.top-header-logo {
+  width: 100vw;
+  padding: 2vh;
+  text-align: center;
+}
+
+.nav-bar {
+  background-color: #e6e6e6;
+  padding: 1vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.nav-bar-left {
+  margin: 0 20px;
+  font-size: 25px;
+  min-width: 200px;
+
+}
+
+.nav-bar-right {
+  margin: 0 20px;
+  display: flex;
+}
+
+.sign-button {
+  margin: 0 10px;
+}
+
+li {
+  list-style: none;
+}
+/* ヘッダー end */
+
+
+
+/* ボディ start */
+
+.app-detail {
+  padding: 10vh 0;
+}
+
+
+
+
+
+
+
+/* ボディ end */
+
+
+/* 商品一覧 始まり*/
+.problem-contents {
+  align-items: center;
+  padding: 10vh 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-contents li {
+  list-style: none;
+}
+
+.problem-title {
+  
+}
+
+.problem-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.problem-lists>.list {
+  width: 37vh;
+  padding: 2vw;
+}
+
+/* .problem-img-content {
+
+} */
+
+.problem-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.problem-info {
+  padding: 1vw;
+}
+
+.problem-name {
+  font-size: 2.5vh;
+}
+
+.problem-grade {
+  font-size: 2vh;
+}
+
+.problem-user {
+  font-size: 2vh;
+}
+
+/* 商品一覧 終わり */
+
+footer {
+  text-align: center;
+  font-size: 80%;
+}
