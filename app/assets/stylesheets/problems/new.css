@@ -1,0 +1,123 @@
+.new-problem-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.new-problem-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.problems-main {
+  background-color: #FFF;
+  width: 80vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.problems-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+.new-problem-detail {
+  padding: 2vh 0;
+}
+
+.setter-name {
+  width: 50%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #747474;
+  font-size: 16px;  
+  margin-bottom: 2vh;
+}
+
+.select-box {
+  margin-bottom: 2vh;
+  height: 30px;
+  width: 50%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+.problem-memo {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #747474;
+  font-size: 16px;
+  resize: none;
+}
+
+.problem-area {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #747474;
+  font-size: 16px;
+  resize: none;
+}
+
+.user-name {
+  margin: 2vh 0;
+}
+
+.user {
+  font-size: 18px;
+}
+
+.problem-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.problem-btn {
+  background: #00bfff;
+  border: 1px solid #00bfff;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+}
+
+.back-btn {
+  background: #d3d3d3;
+  border: 1px solid #d3d3d3;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
+.new-problem-footer {
+  margin: 4vh 0;
+}
