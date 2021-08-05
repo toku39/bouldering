@@ -45,6 +45,10 @@ li {
   padding: 10vh 0;
 }
 
+.app-title {
+  font-size: 26px;
+  text-align: center;
+}
 
 
 
@@ -54,7 +58,7 @@ li {
 /* ボディ end */
 
 
-/* 商品一覧 始まり*/
+/* 課題一覧 始まり*/
 .problem-contents {
   align-items: center;
   padding: 10vh 0;
@@ -67,9 +71,6 @@ li {
   list-style: none;
 }
 
-.problem-title {
-  
-}
 
 .problem-lists {
   width: 100vw;
@@ -82,10 +83,6 @@ li {
   width: 37vh;
   padding: 2vw;
 }
-
-/* .problem-img-content {
-
-} */
 
 .problem-img {
   width: 33vh;
@@ -108,7 +105,7 @@ li {
   font-size: 2vh;
 }
 
-/* 商品一覧 終わり */
+/* 課題一覧 終わり */
 
 footer {
   text-align: center;
