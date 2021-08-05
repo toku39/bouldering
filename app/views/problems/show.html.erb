@@ -1,27 +1,47 @@
+<%# 課題の詳細 %>
+
 <div class="problem-show">
+  <header class="new-problem-header">
+      <%= link_to image_tag('IMG_3923.jpg', size: '200x75'), root_path %>
+  </header>
   <div class="problem-box">
-    <div class="item-img-content">
-      <%= image_tag @problem.image,size: '200x200', class:"item-box-img" %>
+    <div class="problem-img-content">
+      <%= image_tag @problem.image, class:"problem-box-img" %>
     </div>
 
-    <div class="name">
-      <%= @problem.setter %>
-    </div>
-    <div class="item-price-box">
-      <span class="item-postage">
-        <%= @problem.grade.name %>
-      </span>
+    <%if current_user == @problem.user %>
+        <%= link_to "課題の編集", edit_problem_path, method: :get, class: "problem-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", problem_path(@problem.id), method: :delete, class:"problem-destroy" %>
+    <% end %>
 
-      <%= @problem.area %>
-      <%= @problem.memo %>
-      <%= @problem.user.name %>
-      <%= @problem.climb_done.name %>
-
-
-      <%if current_user == @problem.user %>
-          <%= link_to "商品の編集", edit_problem_path, method: :get, class: "problem-red-btn" %>
-          <p class="or-text">or</p>
-          <%= link_to "削除", problem_path(@problem.id), method: :delete, class:"item-destroy" %>
-      <% end %>
-
-    </div>
+    <table class="problem-info">
+      <tbody>
+        <tr>
+          <th class="info-problem">セッター</th>
+          <td class="info-value"><%= @problem.setter %></td>
+        </tr>
+        <tr>
+          <th class="info-problem">グレード</th>
+          <td class="info-value"><%= @problem.grade.name %></td>
+        </tr>
+        <tr>
+          <th class="info-problem">メモ</th>
+          <td class="info-value"><%= @problem.memo %></td>
+        </tr>
+        <tr>
+          <th class="info-problem">壁の形状・場所</th>
+          <td class="info-value"><%= @problem.area %></td>
+        </tr>
+        <tr>
+          <th class="info-problem">ユーザー名</th>
+          <td class="info-value"><%=link_to @problem.user.name, user_path(@problem.user_id) %></td>
+        </tr>
+        <tr>
+          <th class="info-problem">完登・未完登</th>
+          <td class="info-value"><%= @problem.climb_done.name %></td>
+        </tr>
+      </tbody>    
+    </table>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="problem-contents">
+  <h1 class="user-problems"><%= @user.name%>さんの投稿一覧</h1>
+  <ul class="problem-lists">
+    <% @problem.each do |problem| %>
+      <li class="list">
+        <div class="problems-img">
+          <%= image_tag problem.image, class: "problem-img" %>
+        </div>
+
+        <div class="problem-info">
+          <div class="problem-name">
+            <%= "セッター #{problem.setter}" %>
+          </div>
+          <div class="problem-grade">
+            <%= "グレード #{problem.grade.name}" %> 
+          </div>
+        </div>      
+      </li>
+    <%end%>
+  </ul>
+</div>
+
+

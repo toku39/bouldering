@@ -1,13 +1,13 @@
-<div class="new-problem">
-  <div class="new-problem-header">
-    <%= link_to image_tag('IMG_3923.jpg'), root_path%>
-    <h2>課題編集</h2>
-  </div>
-  <%= form_with model: @problem, URL: problem_path, local: true do |f|%>
+<div class="new-problem-contents">
+  <header class="new-problem-header">
+    <%= link_to image_tag('IMG_3923.jpg', size: '200x75'), root_path %>
+  </header>
+  <div class="problems-main">
+    <h2 class="problems-title">課題の情報を入力</h2>
+    <%= form_with model: @problem, URL: problems_path, local: true do |f|%>
 
-  <%= render 'shared/error_messages', model: f.object %>
-
-  <div class="new-problem-main">
+    <%= render 'shared/error_messages', model: f.object %>
+  
     <%# 課題画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -27,7 +27,7 @@
       <div class="weight-bold-text">
         セッターの名前
       </div>
-      <%= f.text_area :setter, class:"setter-name", id:"setter-name" %>
+      <%= f.text_field :setter, class:"setter-name", id:"setter-name" %>
 
 
       <div class="weight-bold-text">
@@ -43,28 +43,32 @@
       <div class="weight-bold-text">
         壁の形状・場所
       </div>
-      <%= f.text_area :area, class:"items-area", id:"item-area", placeholder:"壁の形状・場所を書いてください(例)スラブ、垂壁、セッションエリア、ビギナーエリアなど", maxlength:"40" %>
+      <%= f.text_area :area, class:"problem-area", id:"problem-area", placeholder:"壁の形状・場所を書いてください(例)スラブ、垂壁、セッションエリア、ビギナーエリアなど", maxlength:"40" %>
 
-      <div class="weight-bold-text">
-        ユーザー名
+      <div class="user-name">
+        <div class="weight-bold-text">
+          ユーザー名
+        </div>
+        <div class="user"><%= link_to current_user.name, user_path(@problem.user_id) %></div>
       </div>
-      <%= current_user.name %>
    
       <div class="weight-bold-text">
         完登・未完登
       </div>
       <%= f.collection_select(:climb_done_id, ClimbDone.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-
     </div>
 
     <div class="problem-btn-contents">
-      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%= f.submit "変更する" ,class:"problem-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-  </div>
+  </div> 
+
+  <footer class="new-problem-footer">
+    <%= link_to image_tag('IMG_3923.jpg', size: '185x75'), root_path %>
+    <p class="copy">
+      ©︎Bouldering Record
+    </p>
+  </footer>
 </div>
-
-
-
-
 <% end %>

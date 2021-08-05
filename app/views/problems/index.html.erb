@@ -4,12 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bouldering</title>
-    
-    
+    <title>Bouldering</title>  
   </head>
-
-  
 
   <body>
     <header class="top-header">
@@ -19,7 +15,7 @@
       <div class="nav-bar">
         <div class="nav-bar-left">
           <% if user_signed_in? %>
-            <p class="nav-bar-left">ようこそ <%= link_to current_user.name%>さん</p>
+            <p class="nav-bar-left">ようこそ <%= link_to current_user.name, user_path(current_user.id)%>さん</p>
           <% end %>
         </div>
         <ul class="nav-bar-right">
@@ -36,9 +32,9 @@
       </div>
     </header>
 
-
     <div class="app-detail">
-      <h2>Bouldering Record(ボルレコ)とは？</h2>
+      
+      <h2 class="app-title">Bouldering Record(ボルレコ)とは？</h2>
       <p>ボルダリングの課題を記録・管理・共有できるアプリです。</p>
       <p>良い課題が作成されても一定期間経つと更新され、この世から消えてしまうのはもったいない。良い課題こそネット上に記録し残していこうという想いからボルレコが作られました。</p>
     </div>
@@ -50,7 +46,7 @@
             <li class="list">
               <%= link_to problem_path(problem.id) do %>
               <div class="problem-img-content">
-                <%= image_tag problem.image, size: '200x200', class: "problem-img" %>
+                <%= image_tag problem.image, class: "problem-img" %>
                 <% end %>
               </div>
           
@@ -62,7 +58,7 @@
                   <%= "グレード #{problem.grade.name}" %>
                 </div>
                 <div class="problem-user">
-                  <%= problem.user.name%>
+                  <%= link_to problem.user.name, user_path(problem.user_id)%>
                 </div>
               </div>
             </li>
