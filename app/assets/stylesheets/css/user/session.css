@@ -1,0 +1,19 @@
+
+
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.login-blue-btn {
+  width: 80%;
+  background: #00bfff;
+  border: 1px solid #00bfff;
+  color: #fff;
+  line-height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 2vh;
+}
