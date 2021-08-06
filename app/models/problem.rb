@@ -5,7 +5,7 @@ class Problem < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_many :comments, dependent: :destroy
-  
+
   has_many :likes, dependent: :destroy
 
   with_options presence: true do
@@ -19,12 +19,4 @@ class Problem < ApplicationRecord
     validates :grade_id
     validates :climb_done_id
   end
-
-  # def deletable_vote?(problem)
-  #   problem && problem.user != self && !likes.exists?(problem_id: problem.id)
-  # end
-
-  # def deletable_vote?(problem)
-  #   problem && problem.user != self && likes.exists?(problem_id: problem.id)
-  # end 
 end

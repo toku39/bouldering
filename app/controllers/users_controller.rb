@@ -6,5 +6,4 @@ class UsersController < ApplicationController
     # @problem = Problem.find(params[:id])
     # @problem = Problem.where(params[:id])
   end
-
 end
