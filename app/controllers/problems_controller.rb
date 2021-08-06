@@ -1,5 +1,5 @@
 class ProblemsController < ApplicationController
-  before_action :find_problem, only: [:show, :edit, :update, :destroy] 
+  before_action :find_problem, only: [:show, :edit, :update, :destroy]
 
   def index
     @problem = Problem.order('created_at DESC')
@@ -42,12 +42,11 @@ class ProblemsController < ApplicationController
     end
   end
 
-
-
   private
 
   def problem_params
-    params.require(:problem).permit(:setter, :grade_id, :area, :memo, :user, :climb_done_id, :image).merge(user_id: current_user.id)
+    params.require(:problem).permit(:setter, :grade_id, :area, :memo, :user, :climb_done_id,
+                                    :image).merge(user_id: current_user.id)
   end
 
   def find_problem
