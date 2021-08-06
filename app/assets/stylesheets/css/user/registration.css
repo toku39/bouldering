@@ -1,7 +1,6 @@
 .registration-form {
-  height: 100%;
-  width: 100%;
-  min-width: 800px;
+  height: 100vh;
+  min-width: 500px;
   display: flex;
   font-size: 15px;
   justify-content: center;
@@ -11,12 +10,12 @@
   padding: 5vh 0;
   display: flex;
   justify-content: center;
+  
 }
 
 .form-wrap {
-  width: 40vw;
+  width: 70vw;
   height: 80%;
- 
 }
 
 .form-header {

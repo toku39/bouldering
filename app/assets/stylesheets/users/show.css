@@ -1,4 +1,6 @@
-
+.user-problem {
+  min-width: 200px;
+}
 
 .user-main li {
   list-style: none;
