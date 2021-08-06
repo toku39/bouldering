@@ -58,6 +58,7 @@
 .problem-info {
   margin-bottom: 30px;
   width: 100%;
+  min-width: 200px;
 }
 
 .info-problem {
