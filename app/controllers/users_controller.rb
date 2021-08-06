@@ -7,7 +7,4 @@ class UsersController < ApplicationController
     # @problem = Problem.where(params[:id])
   end
 
-  def liked_by?(problem_id)
-    likes.where(problem_id: problem_id).exists?
-  end
 end
