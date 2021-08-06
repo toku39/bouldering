@@ -76,3 +76,19 @@
 }
 
 /* 課題詳細情報 end */
+
+.problem-comments {
+  width: 60%;
+  padding: 20px;
+  margin: 30px;
+  background-color: #dedede;
+}
+
+.field {
+  padding-left: 15px;
+}
+
+.actions {
+  padding-left: 15px;
+  margin-top: 10px;
+}
