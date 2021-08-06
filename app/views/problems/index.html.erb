@@ -49,7 +49,18 @@
                 <%= image_tag problem.image, class: "problem-img" %>
                 <% end %>
               </div>
-          
+
+              <%# いいね機能 %>
+                <div class="likes">
+                  <% if current_user.liked_by?(problem.id) %>
+                    <p><%= link_to 'いいねを外す', destroy_like_path(problem), method: :DELETE %><%= problem.likes.count %></p>
+                  <% else %>
+                    <p><%= link_to 'いいね', create_like_path(problem), method: :POST %><%= problem.likes.count %></p>
+                  <% end %>
+                </div>
+              <%# いいね機能 %>
+
+
               <div class="problem-info">
                 <div class="problem-name">
                   <%= "セッター #{problem.setter}" %>

@@ -6,6 +6,12 @@ class User < ApplicationRecord
 
   has_many :problems
   has_many :comments
+
+  has_many :likes, dependent: :destroy
   
   validates :name, presence: true
+
+  def liked_by?(problem_id)
+    likes.where(problem_id: problem_id).exists?
+  end
 end
