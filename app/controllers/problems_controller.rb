@@ -1,5 +1,6 @@
 class ProblemsController < ApplicationController
   before_action :find_problem, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @problem = Problem.order('created_at DESC')
