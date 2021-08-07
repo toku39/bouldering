@@ -1,5 +1,10 @@
 class ProblemsController < ApplicationController
+<<<<<<< Updated upstream
   before_action :find_problem, only: [:show, :edit, :update, :destroy] 
+=======
+  before_action :find_problem, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+>>>>>>> Stashed changes
 
   def index
     @problem = Problem.order('created_at DESC')
