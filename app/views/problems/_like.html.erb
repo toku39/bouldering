@@ -1,7 +1,8 @@
 <div class="likes">
   <% if user_signed_in? && current_user.liked_by?(problem.id) %>
-    <p><%= link_to 'いいねを外す', destroy_like_path(problem), method: :DELETE, remote: true %><%= problem.likes.count %></p>
+    <p><%= link_to destroy_like_path(problem),class: "like-link", method: :DELETE, remote: true do %><i class="fa fa-heart unlike-btn"></i><% end %>いいね<%= problem.likes.count %></p>
   <% else %>
-    <p><%= link_to 'いいね', create_like_path(problem), method: :POST, remote: true %><%= problem.likes.count %></p>
+    <p><%= link_to create_like_path(problem), class: "like-link", method: :POST, remote: true do %><i class="fa fa-heart like-btn"></i><% end %>いいね<%= problem.likes.count %></p>
   <% end %>
+  
 </div>
