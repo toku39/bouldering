@@ -1,0 +1,1 @@
+document.getElementById('problem_<%= @problem.id %>').innerHTML = '<%= escape_javascript(render partial: 'problems/like', locals: {problem: @problem}) %>';
