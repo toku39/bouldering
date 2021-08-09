@@ -33,47 +33,68 @@
     </header>
 
     <div class="app-detail">
-      
-      <h2 class="app-title">Bouldering Record(ボルレコ)とは？</h2>
-      <p>ボルダリングの課題を記録・管理・共有できるアプリです。</p>
-      <p>良い課題が作成されても一定期間経つと更新され、この世から消えてしまうのはもったいない。良い課題こそネット上に記録し残していこうという想いからボルレコが作られました。</p>
-    </div>
+      <div class="app-detail-header">
+        <div class="app-title">Bouldering Record(ボルレコ)とは？
+          <p>ボルダリングの課題を記録・管理・共有できるアプリです。</p>
+          <p>良い課題が作成されても一定期間経つと更新され、この世から消えてしまうのはもったいない。<br>良い課題こそネット上に記録し残していこうという想いからボルレコが作られました。</p>
+        </div>
 
-      <div class="problem-contents">
-        <h2 class="problem-title">投稿一覧</h2>
-        <ul class="problem-lists">
-          <% @problem.each do |problem| %>
-            <li class="list">
-              <%= link_to problem_path(problem.id) do %>
-              <div class="problem-img-content">
-                <%= image_tag problem.image, class: "problem-img" %>
-                <% end %>
-              </div>
-
-              <%# いいね機能 %>
-              <div id="problem_<%= problem.id %>">
-                <%= render partial: 'like', locals: {problem: problem} %>
-              </div>
-              <%# いいね機能 %>
-
-              <div class="problem-info">
-                <div class="problem-name">
-                  <%= "セッター #{problem.setter}" %>
-                </div>
-                <div class="problem-grade">
-                  <%= "グレード #{problem.grade.name}" %>
-                </div>
-                <div class="problem-user">
-                  <%= link_to problem.user.name, user_path(problem.user_id)%>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
+        <div class="app-usage">
+          <h2 class="app-usage-title">
+            クライミングに関わる人達のための<br>Bouldering Record
+            <div class="app-persona">
+              <ul>クライマー
+                <li>登った課題の記録</li>
+                <li>技術力の向上</li>
+              </ul>
+              <ul>ジムオーナー
+                <li>オンライン上での課題の告知</li>
+                <li>マンスリー・ウィークリー課題の共有</li>
+              </ul>
+              <ul>セッター
+                <li>作った課題の記録</li>
+                <li>セッションの共有</li>
+              </ul>
+            </div>
+          </h2>
+        </div>  
       </div>
+    </div>
+    
+    <div class="problem-contents">
+      <h2 class="problem-title">投稿一覧</h2>
+      <ul class="problem-lists">
+        <% @problem.each do |problem| %>
+          <li class="list">
+            <%= link_to problem_path(problem.id) do %>
+            <div class="problem-img-content">
+              <%= image_tag problem.image, class: "problem-img" %>
+              <% end %>
+            </div>
+
+            <%# いいね機能 %>
+            <div id="problem_<%= problem.id %>">
+              <%= render partial: 'like', locals: {problem: problem} %>
+            </div>
+            <%# いいね機能 %>
+
+            <div class="problem-info">
+              <div class="problem-name">
+                <%= "セッター #{problem.setter}" %>
+              </div>
+              <div class="problem-grade">
+                <%= "グレード #{problem.grade.name}" %>
+              </div>
+              <div class="problem-user">
+                <%= link_to problem.user.name, user_path(problem.user_id)%>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
     <footer>
       &copy; Bouldering Record
-    </footer>
-      
+    </footer>    
   </body>
 </html>

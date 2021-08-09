@@ -1,5 +1,11 @@
-
+body {
+  background: #f5f5f5;
+}
 /* ヘッダー start */
+.top-header {
+  border-bottom: 1px solid #dcdcdc;
+}
+
 .top-header-logo {
   width: 100vw;
   padding: 2vh;
@@ -43,15 +49,54 @@ li {
 /* ボディ start */
 
 .app-detail {
-  padding: 10vh 0;
+  padding: 8vh 0 1vh ;
   min-width: 200px;
 }
 
-.app-title {
-  font-size: 26px;
+.app-detail-header {
   text-align: center;
 }
 
+.app-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.app-title p {
+  margin-top: 26px;
+  width: 100%;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.app-usage {
+  min-width: 200px;
+}
+
+.app-usage-title {
+  padding: 10vh;
+}
+
+.app-persona {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 200px;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 26px;
+}
+
+.app-persona ul {
+  padding-top: 3vh;
+  margin: 0 auto;
+  width: 33%;
+}
+
+.app-persona li {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: normal;
+}
 
 
 
@@ -63,10 +108,9 @@ li {
 /* 課題一覧 始まり*/
 .problem-contents {
   align-items: center;
-  padding: 10vh 0;
-
   display: flex;
   flex-direction: column;
+  margin-bottom: 3vh;
 }
 
 .problem-contents li {
@@ -111,5 +155,7 @@ li {
 
 footer {
   text-align: center;
-  font-size: 80%;
+  font-size: 16px;
+  padding: 1vh 0;
+  width: 100%;
 }

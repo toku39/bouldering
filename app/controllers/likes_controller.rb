@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :find_problem, only: [:create, :destroy]
+  
   def create
     Like.create(user_id: current_user.id, problem_id: params[:id])
   end
