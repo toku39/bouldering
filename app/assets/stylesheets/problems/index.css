@@ -96,6 +96,7 @@ li {
   font-size: 26px;
   font-weight: bold;
   padding: 26px;
+  justify-content: center;
 }
 
 .app-persona ul {
