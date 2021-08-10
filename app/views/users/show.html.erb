@@ -1,10 +1,18 @@
 <div class="problem-contents">
+  <header class="new-problem-header">
+      <%= link_to image_tag('IMG_3923.jpg', size: '200x75'), root_path %>
+  </header>
+  
   <h1 class="user-problems"><%= @user.name%>さんの投稿一覧</h1>
   <ul class="problem-lists">
     <% @problem.each do |problem| %>
       <li class="list">
         <div class="problems-img">
           <%= image_tag problem.image, class: "problem-img" %>
+        </div>
+
+        <div id="problem_<%= problem.id %>">
+          <%= render partial: 'problems/like', locals: {problem: problem} %>
         </div>
 
         <div class="problem-info">
