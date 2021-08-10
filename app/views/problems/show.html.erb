@@ -9,6 +9,10 @@
       <%= image_tag @problem.image, class:"problem-box-img" %>
     </div>
 
+    <div id="problem_<%= @problem.id %>">
+      <%= render partial: 'like', locals: {problem: @problem} %>
+    </div>
+
     <%if current_user == @problem.user %>
         <%= link_to "課題の編集", edit_problem_path, method: :get, class: "problem-red-btn" %>
         <p class="or-text">or</p>
