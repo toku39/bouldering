@@ -37,6 +37,17 @@ body {
 
 .sign-button {
   margin: 0 10px;
+  text-decoration: none;
+  padding: 10px;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.sign-button:hover {
+  background: #67c5ff;
+  color: white;
 }
 
 li {
