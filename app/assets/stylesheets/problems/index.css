@@ -71,6 +71,7 @@ li {
 .app-title {
   font-size: 30px;
   font-weight: bold;
+  min-width: 200px;
 }
 
 .app-title p {
@@ -91,7 +92,7 @@ li {
 .app-persona {
   display: flex;
   flex-wrap: wrap;
-  min-width: 200px;
+  min-width: 100px;
   font-size: 26px;
   font-weight: bold;
   padding: 26px;
@@ -101,6 +102,7 @@ li {
   padding-top: 3vh;
   margin: 0 auto;
   width: 33%;
+  min-width: 200px;
 }
 
 .app-persona li {
@@ -108,10 +110,6 @@ li {
   font-size: 20px;
   font-weight: normal;
 }
-
-
-
-
 
 /* ボディ end */
 
