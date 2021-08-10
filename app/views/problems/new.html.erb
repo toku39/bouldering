@@ -17,7 +17,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"problem-image" %>
       </div>
     </div>
     <%# 課題画像 %>
@@ -33,7 +33,7 @@
       <div class="weight-bold-text">
           グレード
       </div>
-      <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"problem-category"}) %>
 
       <div class="weight-bold-text">
         メモ
@@ -55,7 +55,7 @@
       <div class="weight-bold-text">
         完登・未完登
       </div>
-      <%= f.collection_select(:climb_done_id, ClimbDone.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      <%= f.collection_select(:climb_done_id, ClimbDone.all, :id, :name, {}, {class:"select-box", id:"problem-category"}) %>
     </div>
 
     <div class="problem-btn-contents">
