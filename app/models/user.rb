@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :problems
   has_many :comments
-
   has_many :likes, dependent: :destroy
 
   validates :name, presence: true
