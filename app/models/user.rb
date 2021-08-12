@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   validates :name, presence: true
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze, message: '半角英数字でなければ登録できない' }
 
   def liked_by?(problem_id)
     likes.where(problem_id: problem_id).exists?
