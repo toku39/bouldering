@@ -52,7 +52,9 @@ https://bouldering-395.herokuapp.com/
 
 
 
+## モデル単体テストコードGyazo
 
+[![Image from Gyazo](https://i.gyazo.com/b5603472a0da323989c5ac2066f53171.png)](https://gyazo.com/b5603472a0da323989c5ac2066f53171)
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/80cff5c9cc1170f91c2ac52d4c9955d9.png)](https://gyazo.com/80cff5c9cc1170f91c2ac52d4c9955d9)

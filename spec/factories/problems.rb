@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :problem do
-    setter         { Faker::Lorem.sentence}
-    area           { Faker::Lorem.sentence}
-    memo           { Faker::Lorem.sentence}
+    setter         {Faker::Lorem.sentence}
+    area           {Faker::Lorem.sentence}
+    memo           {Faker::Lorem.sentence}
     grade_id       { 2 }
     climb_done_id  { 2 }
 
