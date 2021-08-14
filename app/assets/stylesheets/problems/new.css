@@ -48,6 +48,13 @@
   margin-bottom: 15px;
 }
 
+/* プレビュー */
+.problem-preview-img{
+  height: 33%;
+  width: 33%;
+}
+/* プレビュー */
+
 .new-problem-detail {
   padding: 2vh 0;
 }
