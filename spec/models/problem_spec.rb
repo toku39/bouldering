@@ -43,6 +43,5 @@ RSpec.describe Problem, type: :model do
         expect(@problem.errors.full_messages).to include('Climb done must be other than 1')
       end
     end
-
   end
 end
