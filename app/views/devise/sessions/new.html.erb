@@ -31,8 +31,14 @@
     <div class='login-btn'>
       <%= f.submit "ログイン" ,class:"login-blue-btn" %>
     </div>
-    <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
-    <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+    <div class="sns-login">
+      <div class="facebook">
+        <i class="far fa-envelope"></i> <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
+      </div>
+      <div class="google">
+        <i class="fab fa-google"></i> <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+      </div>
+    </div>
   </div>
   <% end %>
 </div>

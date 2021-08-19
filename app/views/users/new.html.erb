@@ -1,3 +1,6 @@
+<header class="new-problem-header">
+  <%= link_to image_tag('IMG_3923.jpg', size: '200x75'), root_path %>
+</header>
 <ul class="user-registration">
   <li class="mail"><i class="far fa-envelope"></i> <%= link_to "メールアドレスで登録", new_user_registration_path%></li>
   <li class="facebook"><i class="fab fa-facebook-square"></i> <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post%></li>
