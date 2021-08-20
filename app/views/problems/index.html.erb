@@ -61,6 +61,7 @@
       </div>
     </div>
     
+    <% if @problem.present? %>
     <div class="problem-contents">
       <h2 class="problem-title">投稿一覧</h2>
       <ul class="problem-lists">
@@ -93,6 +94,26 @@
         <% end %>
       </ul>
     </div>
+    
+    <% else %>
+    <div class="problem-sample">
+      <h2 class="sample-title">sample</h2>
+      <div class="problem-sample-img">
+        <%= image_tag 'sample.JPG' , class: "sample-img" %>
+      </div>
+      <div class="problem-info">
+        <div class="problem-name">
+          セッター sample
+        </div>
+        <div class="problem-grade">
+          グレード V1
+        </div>
+        <div class="problem-user">
+          ユーザー sample
+        </div>
+      </div>
+    </div>
+    <% end %>
     <footer>
       &copy; Bouldering Record
     </footer>    
