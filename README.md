@@ -33,8 +33,18 @@ https://bouldering-395.herokuapp.com/
 
 ## 今後実装したい機能
 
-## 要件定義
+## 実装機能紹介GIF
 
+課題投稿機能
+[![Image from Gyazo](https://i.gyazo.com/3f154e52700caed54d35ba2fa0efb2d4.gif)](https://gyazo.com/3f154e52700caed54d35ba2fa0efb2d4)
+
+投稿一覧機能
+[![Image from Gyazo](https://i.gyazo.com/1ceb640703b0aad881e3f078fc95e25d.gif)](https://gyazo.com/1ceb640703b0aad881e3f078fc95e25d)
+
+いいね機能（非同期通信）
+[![Image from Gyazo](https://i.gyazo.com/0a2d70858402ca51ad0be0a9cba008aa.gif)](https://gyazo.com/0a2d70858402ca51ad0be0a9cba008aa)
+
+## 要件定義
 ### 優先順位
 
 |（高：3、中：2、低：1）| 機能 | 目的 | 詳細 | ストーリー(ユースケース) | 見積もり所要時間 |
@@ -53,7 +63,7 @@ https://bouldering-395.herokuapp.com/
 
 
 
-## モデル単体テストコードGyazo
+## モデル単体テストコードGIF
 
 [![Image from Gyazo](https://i.gyazo.com/b5603472a0da323989c5ac2066f53171.png)](https://gyazo.com/b5603472a0da323989c5ac2066f53171)
 
