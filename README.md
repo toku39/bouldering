@@ -44,6 +44,9 @@ https://bouldering-395.herokuapp.com/
 いいね機能（非同期通信）
 [![Image from Gyazo](https://i.gyazo.com/0a2d70858402ca51ad0be0a9cba008aa.gif)](https://gyazo.com/0a2d70858402ca51ad0be0a9cba008aa)
 
+コメント機能
+[![Image from Gyazo](https://i.gyazo.com/397a1d60db2d795d7107fa4609599d99.gif)](https://gyazo.com/397a1d60db2d795d7107fa4609599d99)
+
 ## 要件定義
 ### 優先順位
 
