@@ -4,7 +4,7 @@ Bouldering Record(ボルレコ)
 
 ## アプリケーション概要
 
-ボルダリングの課題の投稿・記録・共有ができるアプリケーション。
+ボルダリングの課題(登るコース)の投稿・記録・共有ができるアプリケーション。
 
 ## 制作背景
 
@@ -13,6 +13,7 @@ Bouldering Record(ボルレコ)
 ## 工夫した点
 
 非同期通信でのいいね機能を実装したこと
+googleとfacebookアカウントでログインできるようにしたこと
 7つのアクションを全て使ってるところ
 
 ## デプロイ済みのURL
@@ -28,10 +29,11 @@ https://bouldering-395.herokuapp.com/
 
 | name | email    | password |
 | ---- | -------  | -------- |
-| a    | aaaa@aaa | aaa111   |
-| b    | bbbb@bb  | bbb111   |
+| テスト１ | test1@gmail.com | test11 |
+| テスト２ | test2@gmail.com | test22 |
 
 ## 今後実装したい機能
+画像の加工機能
 
 ## 実装機能紹介GIF
 
@@ -64,8 +66,6 @@ https://bouldering-395.herokuapp.com/
 | 1 | ユーザー詳細機能 | ユーザーが投稿した内容を表示することができる。 | ユーザー名を押すとユーザー詳細ページに遷移する。ユーザーが過去に投稿した内容の一覧を降順で表示させる。 | ユーザーが投稿した全ての課題を見ることができる。 | 1日 |
 | 1 | プレビュー機能 | 課題投稿時、選択した画像のプレビューが表示することができる。 | 課題投稿時、選択した画像のプレビューが表示することができる。編集画面でも表示することができる。 | 投稿前に画像を確認できることで画像の選択ミスをなくすことができる | 1 |
 
-
-
 ## モデル単体テストコードGIF
 
 [![Image from Gyazo](https://i.gyazo.com/b5603472a0da323989c5ac2066f53171.png)](https://gyazo.com/b5603472a0da323989c5ac2066f53171)
@@ -86,7 +86,6 @@ https://bouldering-395.herokuapp.com/
 - has_many :problems
 - has_many :comments
 - has_many :likes, dependent: :destroy
-
 
 ## problems テーブル
 
