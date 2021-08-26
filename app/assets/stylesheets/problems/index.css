@@ -55,10 +55,7 @@ li {
 }
 /* ヘッダー end */
 
-
-
 /* ボディ start */
-
 .app-detail {
   padding: 8vh 0 1vh ;
   min-width: 200px;
@@ -111,11 +108,9 @@ li {
   font-size: 20px;
   font-weight: normal;
 }
-
 /* ボディ end */
 
-
-/* 課題一覧 始まり*/
+/* 課題一覧 start*/
 .problem-contents {
   align-items: center;
   display: flex;
@@ -160,10 +155,9 @@ li {
 .problem-user {
   font-size: 2vh;
 }
+/* 課題一覧 end */
 
-/* 課題一覧 終わり */
-
-/* 課題サンプル */
+/* 課題サンプル start */
 .problem-sample {
   width: 100vw;
   text-align: center;
@@ -178,7 +172,7 @@ li {
   width: 33vh;
   height: 33vh;
 }
-/* 課題サンプル */
+/* 課題サンプル end */
 
 footer {
   text-align: center;

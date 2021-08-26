@@ -48,12 +48,12 @@
   margin-bottom: 15px;
 }
 
-/* プレビュー */
+/* プレビュー start */
 .problem-preview-img{
   height: 33%;
   width: 33%;
 }
-/* プレビュー */
+/* プレビュー end */
 
 .new-problem-detail {
   padding: 2vh 0;
