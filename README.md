@@ -132,7 +132,7 @@ https://bouldering-395.herokuapp.com/
 - belongs_to :user
 - belongs_to :problem
 
-## パッケージ 
+## パッケージ
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -212,3 +212,5 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
 gem 'omniauth', '~>1.9.1'
+
+gem "aws-sdk-s3", require: false
